@@ -21,7 +21,7 @@ void setup()
   //initialize SPI communications used for SD and RFID 
   SPI.begin();
 
-  //initialize real time clock pins 4 and 5
+  //initialize real time clock I2C communication through analog pins 4 and 5
   rtc.begin();
 
 
