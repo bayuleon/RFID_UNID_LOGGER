@@ -7,10 +7,18 @@
 AddicoreRFID myRFID;
 RTC_DS1307 rtc;
 
+//change this depending on the SS pin for the SD slot
 const int chipSelectSD = 10;
+
+//change this depending on the SS pin for the RFID Module
 const int chipSelectRFID = 7;
+
+//change this depending on the Reset pin for the RFID Module
 const int resetRFID = 3;
+
+//change this depending on the file you want to save data to on the SD card
 const char* saveFile = "dl.txt";
+
 #define MAX_LEN 16
 
 void setup()
