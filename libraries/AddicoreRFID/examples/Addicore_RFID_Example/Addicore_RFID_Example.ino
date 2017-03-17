@@ -16,8 +16,8 @@ AddicoreRFID myRFID; // create AddicoreRFID object to control the RFID module
 /////////////////////////////////////////////////////////////////////
 //set the pins
 /////////////////////////////////////////////////////////////////////
-const int chipSelectPin = 9;
-const int NRSTPD = 8;
+const int chipSelectPin = 10;
+const int NRSTPD = 5;
 
 //Maximum length of the array
 #define MAX_LEN 16
@@ -30,9 +30,9 @@ void setup() {
 
   Serial.print("hello world");
   
-  pinMode(chipSelectPin,OUTPUT);              // Set digital pin 9 as OUTPUT to connect it to the RFID /ENABLE pin 
+  pinMode(chipSelectPin,OUTPUT);              // Set digital pin 10 as OUTPUT to connect it to the RFID /ENABLE pin 
     digitalWrite(chipSelectPin, LOW);         // Activate the RFID reader
-  pinMode(NRSTPD,OUTPUT);                     // Set digital pin 9 , Not Reset and Power-down
+  pinMode(NRSTPD,OUTPUT);                     // Set digital pin 5, Not Reset and Power-down
     digitalWrite(NRSTPD, HIGH);
 
   myRFID.AddicoreRFID_Init();  
