@@ -33,7 +33,7 @@ void setup()
     delay(1000);
   }
 
-  //set the values for RFID SPI communication and initialize
+  //set the value for the Slave Select and the Reset pin then initialize
   myRFID.Advanced_Setup_AddicoreRFID(chipSelectRFID, resetRFID);
   myRFID.AddicoreRFID_Init();
 
